@@ -1,25 +1,22 @@
 import axios from 'axios';
 
-// Mengambil URL Backend dari file .env.local
-const API_URL = process.env.REACT_APP_API_URL;
-
 const api = axios.create({
-    baseURL: API_URL,
+    baseURL: 'http://localhost:5000/api', 
     headers: {
         'Content-Type': 'application/json',
     },
 });
 
-// INTERCEPTOR: Otomatis sisipkan Token ke setiap Request
-api.interceptors.request.use(config => {
-    // Ambil token dari browser storage
-    const token = localStorage.getItem('token');
-    
-    if (token) {
-        // Jika token ada, tambahkan ke header Authorization: Bearer <token>
-        config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-});
+// Interceptor untuk menyisipkan Token otomatis (jika ada)
+api.interceptors.request.use(
+    (config) => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+        return config;
+    },
+    (error) => Promise.reject(error)
+);
 
 export default api;
