@@ -46,6 +46,8 @@ const seedDatabase = async () => {
                 spot_number VARCHAR(10) NOT NULL,
                 status ENUM('AVAILABLE', 'OCCUPIED', 'RESERVED') DEFAULT 'AVAILABLE',
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                user_id INT NULL,
+                booking_time DATETIME NULL,
                 FOREIGN KEY (lot_id) REFERENCES parking_lots(id) ON DELETE CASCADE
             )
         `;
