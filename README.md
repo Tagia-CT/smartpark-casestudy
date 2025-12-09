@@ -259,7 +259,7 @@ Kita akan mengunduh kode dan menginstal library yang dibutuhkan untuk Backend (N
 
 # 1. Clone repository ini ke komputer Anda
 ```bash
-git clone [https://github.com/Tagia-CT/smartpark-casestudy.git](https://github.com/Tagia-CT/smartpark-casestudy.git)
+git clone https://github.com/Tagia-CT/smartpark-casestudy.git
 ```
 
 # 2. Masuk ke folder proyek
