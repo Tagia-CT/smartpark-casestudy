@@ -257,14 +257,18 @@ Kita akan mengunduh kode dan menginstal library yang dibutuhkan untuk Backend (N
 1.  Buka terminal (Git Bash / PowerShell / CMD).
 2.  Jalankan perintah berikut:
 
-```bash
 # 1. Clone repository ini ke komputer Anda
-git clone [https://github.com/username-anda/smartpark-casestudy.git](https://github.com/username-anda/smartpark-casestudy.git)
+```bash
+git clone [https://github.com/Tagia-CT/smartpark-casestudy.git](https://github.com/Tagia-CT/smartpark-casestudy.git)
+```
 
 # 2. Masuk ke folder proyek
+```bash
 cd smartpark-casestudy
+```
 
 # 3. Install semua dependensi (Otomatis install untuk root, backend, dan frontend)
+```bash
 npm run install-all
 ```
 > *Catatan: Jika perintah `npm run install-all` gagal, Anda bisa menginstall manual dengan masuk ke folder `backend` lalu ketik `npm install`, kemudian masuk ke folder `frontend` dan ketik `npm install`.*
